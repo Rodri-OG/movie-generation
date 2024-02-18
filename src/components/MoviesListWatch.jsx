@@ -2,12 +2,7 @@
 
 import { Suspense, useEffect, useState } from 'react'
 import Loading from '@/components/Loading';
-
-
-
-//Styles
-import '@material/web/button/elevated-button.js';
-import CardSmall from './CardSmall';
+import CardSmall from '@/components/CardSmall';
 
 export default function MoviesListWatch (props){
 

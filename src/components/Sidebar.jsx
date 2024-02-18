@@ -4,16 +4,6 @@ import Link from 'next/link'
 import { useState } from 'react';
 
 
-
-//Styles
-import '@material/web/divider/divider.js';
-import '@material/web/icon/icon.js';
-import '@material/web/iconbutton/icon-button.js';
-import '@material/web/list/list.js';
-import '@material/web/list/list-item.js';
-
-
-
 export default function Sidebar () {
 
   const [ open, setOpen ] = useState(false);

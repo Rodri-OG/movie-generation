@@ -1,4 +1,3 @@
-import '@material/web/list/list.js';
 import Image from 'next/image'
 
 async function getMovieData (movie_id){ 

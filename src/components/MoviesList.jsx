@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 
 
-import '@material/web/button/elevated-button.js';
-
-
 export default  function  MoviesList () {
   
   const [ filmList, setFilmList] = useState([]);
@@ -43,15 +40,15 @@ export default  function  MoviesList () {
             </div>
             <div className="p-1 row-start-2 row-end-3" >
                 <p className="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">{movie.original_title}</p>
-                <p className="block font-sans text-sm antialiased font-normal leading-normal opacity-75">{movie.overview.substring(0, 80)}</p>
+                <p className="block font-sans text-sm antialiased font-normal leading-normal opacity-75">{movie.overview.substring(0, 120)}</p>
             </div>
             <div className="row-start-3 row-end-4 p-2">
-                <md-elevated-button
-                  className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs p-3 px-6 rounded-lg shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block w-full bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+                <button
+                  className="btn-elevated relative flex flex-row items-center justify-center gap-x-2 py-2.5 px-6 rounded-[6.25rem] shadow-lg text-sm tracking-[.00714em] font-medium bg-primary hover:bg-primaryContainer focus:bg-onPrimaryContainer text-onPrimary"
                   type="button"
                   onClick={() => router.push(`/${movie.id}`)}>
                   Detalles
-                </md-elevated-button>
+                </button>
               </div> 
           </div>
         })

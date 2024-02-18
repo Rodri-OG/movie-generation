@@ -1,8 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
-import GenreSelected from "./GenreSelected"
-import MoviesListWatch from "./MoviesListWatch"
-import '@material/web/button/elevated-button.js';
+import GenreSelected from "@/components/GenreSelected"
+import MoviesListWatch from "@/components/MoviesListWatch"
 
 
 
@@ -34,12 +33,14 @@ export default function MovieRecommendation () {
         onClick={() => setSelected(false)}>
         <span className="material-icons flex items-center">arrow_back_ios</span>
       </button>
-     {!selected
-      ? <div className={`${ selected && "transition-all translate-y-40 duration-700" }`} > <GenreSelected handleClick={handleClick} /></div>
-      : <div className={`${ !selected && "transition-all translate-y-40 duration-700" }`} ><MoviesListWatch genId={genId}/></div>
-      }
+      
+      {!selected
+        ? <GenreSelected handleClick={handleClick} /> 
+        : <MoviesListWatch genId={genId}/>
+        }
     </div>
        
     </>
   )
 }
+

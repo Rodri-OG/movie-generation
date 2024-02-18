@@ -3,7 +3,6 @@
 export default function GenreSelected ({ handleClick }) {
 
 
-
   // Hay 19 generos
   const moviesGenres = [
     {
@@ -89,22 +88,22 @@ export default function GenreSelected ({ handleClick }) {
     <>
         <div className="grid grid-cols-1 bg-surfaceVariant w-full shadow-md rounded-xl p-3 gap-3 ">
             
-              <h1>¡Hola! </h1>
-              <h2>¿No sabés que ver?</h2>
-              <h2>Te recomendamos algo para que veas hoy</h2>
-              <h3>Seleccioná un género:</h3>
-              <div className="grid grid-cols-2 grid-rows-1  gap-2 place-content-center h-full w-full">
-                {moviesGenres.map((genre, id)=>{
-                  return <div key={id} className="row-auto">
-                              <md-elevated-button
-                                type="button"
-                                onClick={()=>handleClick(genre.id)}>
-                                {genre.name}
-                              </md-elevated-button>
-                              <br/>
-                          </div> })}
-                    </div>
+          <h1>¡Hola! </h1>
+          <h2>¿No sabés que ver?</h2>
+          <h2>Te recomendamos algo para que veas hoy</h2>
+          <h3>Seleccioná un género:</h3>
+          <div className="grid grid-cols-2 grid-rows-1  gap-2 place-content-center h-full w-full">
+            {moviesGenres.map((genre, id)=>{
+              return <div key={id} className="row-auto">
+                          <button
+                            onClick={() => handleClick(genre.id)}
+                            className="btn-elevated relative flex flex-row items-center justify-center gap-x-2 py-2.5 px-6 rounded-[6.25rem] shadow-lg text-sm tracking-[.00714em] font-medium bg-primary hover:bg-primaryContainer focus:bg-onPrimaryContainer text-onPrimary"
+                            >
+                            {genre.name}
+                          </button>
+                      </div> })}
                 </div>
+            </div>
     </> 
     )
   
